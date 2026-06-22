@@ -1,15 +1,15 @@
 # Leave Policy RAG Chatbot
 
-A Retrieval-Augmented Generation (RAG) chatbot built using LangChain, Google Gemini, and FAISS. The chatbot answers questions based on the content of a PDF document by retrieving relevant information from a vector database and generating context-aware responses.
+A Retrieval-Augmented Generation (RAG) chatbot built using LangChain, Google Gemini, and FAISS. The chatbot answers questions from PDF documents by retrieving relevant information from a vector database and generating context-aware responses.
 
 ## Features
 
-* PDF document loading
-* Text chunking with overlap
+* PDF Document Loading
+* Text Chunking with Overlap
 * Google Gemini Embeddings
 * FAISS Vector Database
 * Similarity Search Retrieval
-* Gemini 2.5 Flash LLM Integration
+* Gemini 2.5 Flash Integration
 * Interactive Command-Line Chatbot
 * Modular Project Structure
 
@@ -59,6 +59,7 @@ rag-chatbot/
 ├── app.py
 ├── requirements.txt
 ├── .env
+├── LICENSE
 └── README.md
 ```
 
@@ -76,28 +77,8 @@ rag-chatbot/
 ### Clone Repository
 
 ```bash
-git clone <your-github-repository-url>
-cd rag-chatbot
-```
-
-### Create Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-### Activate Virtual Environment
-
-Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-Linux/Mac:
-
-```bash
-source venv/bin/activate
+git clone https://github.com/YOUR_USERNAME/Leave-policy-RAG.git
+cd Leave-policy-RAG
 ```
 
 ### Install Dependencies
@@ -108,7 +89,7 @@ pip install -r requirements.txt
 
 ## Environment Variables
 
-Create a `.env` file in the project root.
+Create a `.env` file in the project root directory.
 
 ```env
 GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
@@ -116,7 +97,7 @@ GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
 
 ## Build Vector Database
 
-Place your PDF inside:
+Place your PDF document inside:
 
 ```text
 data/sample.pdf
@@ -135,7 +116,7 @@ This process:
 * Generates embeddings
 * Creates a FAISS vector database
 
-Generated files:
+Generated Files:
 
 ```text
 vectorstore/faiss_index/
@@ -143,7 +124,7 @@ vectorstore/faiss_index/
 └── index.pkl
 ```
 
-## Run Chatbot
+## Run the Chatbot
 
 ```bash
 python app.py
@@ -182,32 +163,32 @@ What is the anti-ragging policy?
 
 ### Retrieval
 
-* User question is converted into embeddings.
-* FAISS retrieves the most relevant chunks.
+* Convert user question into embeddings.
+* Retrieve relevant chunks using FAISS similarity search.
 
 ### Augmentation
 
-* Retrieved chunks are combined into context.
+* Combine retrieved chunks into a context.
 
 ### Generation
 
-* Gemini 2.5 Flash generates an answer using the retrieved context.
+* Generate answers using Gemini 2.5 Flash based on retrieved context.
 
 ## Learning Outcomes
 
 This project demonstrates:
 
 * Document Loading
-* Metadata Handling
 * Text Chunking
+* Metadata Usage
 * Vector Embeddings
 * Vector Databases
 * Similarity Search
-* Retrieval-Augmented Generation
+* Retrieval-Augmented Generation (RAG)
 * LangChain Integration
 * Google Gemini Integration
 
-## Future Improvements
+## Future Enhancements
 
 * FastAPI Backend
 * React Frontend
@@ -219,6 +200,10 @@ This project demonstrates:
 * Pinecone Integration
 * User Authentication
 * Cloud Deployment
+
+## License
+
+This project is licensed under the MIT License.
 
 ## Author
 Dineshkarthick
